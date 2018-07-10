@@ -45,6 +45,7 @@ Usage: $ ./script_name <num_of_ovs_instances>
 ## NOTES
  * configure_ovs.sh, mk-net-dev.sh, supervisord.conf are taken from the contribution of Josh Hershberg specified in Credits section.
  * You need to change network interface name in configure_ovs.sh script as per your machine. It can be eth0, enp0s8, etc.
+ * You need to change name of docker image in the run_docker_ovs.sh file at line 12.
 
 ## Credits
 This docker solution is largely based on following contributors in github:
