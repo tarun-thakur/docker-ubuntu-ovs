@@ -41,6 +41,10 @@ Usage: $ ./script_name <num of ovs instances> <controller-ip>
 This is a cleanup script for run_docker_ovs script. It will stop docker container and remove it.
 
 Usage: $ ./script_name <num of ovs instances>
+  
+## NOTES
+ * configure_ovs.sh, mk-net-dev.sh, supervisord.conf are taken from the contribution of Josh Hershberg specified in Credits section.
+ * You need to change network interface name in configure_ovs.sh script as per your machine. It can be eth0, enp0s8, etc.
 
 ## Credits
 This docker solution is largely based on following contributors in github:
