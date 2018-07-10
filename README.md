@@ -31,11 +31,18 @@ If you want to run large number of instances of this docker images to have large
  * run_docker_ovs.sh
  * stop_rm_docker_ovs.sh
 
-### run_docker_ovs.sh script
+### run_docker_ovs script
+This script will run specified number of instances of this docker images.
+It will ask few command line arguments and will instantiate specified number of docker instances in which ovs will be running and ovs manager and controller will be connected to controller based on ip-address specified.
 
-### stop_rm_docker_ovs.sh script
+Usage: $ ./script_name <num of ovs instances> <controller-ip>
+
+### stop_rm_docker_ovs script
+This is a cleanup script for run_docker_ovs script. It will stop docker container and remove it.
+
+Usage: $ ./script_name <num of ovs instances>
 
 ## Credits
-This work is largely based on followong contributors in github:
+This docker solution is largely based on following contributors in github:
 * Dave Tucker: https://github.com/dave-tucker/docker-ovs  Thank you Dave.
 * Josh Hershberg: https://github.com/jhershberg/docker-centos-ovs Thank you Josh.
