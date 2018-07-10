@@ -17,10 +17,10 @@ To run the docker image say,
  * sudo docker run -itd --name <docker-instance-name> -e MODE=tcp:<controller-ip> --cap-add NET_ADMIN <name_of_your_image>
 
 ## How to run ovs commands under docker
-docker exec <docker-instance-name> ovs-vsctl show
-docker exec <docker-instance-name> ovs-vsctl list Open_vSwitch
-docker exec <docker-instance-name> ovs-vsctl set O . other_config:local_ip=192.168.56.101
-docker exec <docker-instance-name> ovs-ofctl dump-flows -O Openflow13 br-int
+* docker exec <docker-instance-name> ovs-vsctl show
+* docker exec <docker-instance-name> ovs-vsctl list Open_vSwitch
+* docker exec <docker-instance-name> ovs-vsctl set O . other_config:local_ip=192.168.56.101
+* docker exec <docker-instance-name> ovs-ofctl dump-flows -O Openflow13 br-int
 
 ## Credits
 This work is largely based on followong contributors in github:
