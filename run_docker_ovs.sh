@@ -9,7 +9,8 @@ echo "Number of Switches specified: " $1
 echo "Controller IP: " $2
 
 for ((i=1;i<=$1;i++)); do
-    docker run -itd --name ovs$i -e MODE=tcp:$2 --cap-add NET_ADMIN tarun-ovs-9
+    # NOTE: Change your docker image name in below line while using this script
+    docker run -itd --name ovs$i -e MODE=tcp:$2 --cap-add NET_ADMIN docker-ubuntu-ovs-img
     # Get IP address of container;
     # NOTE: docker networking by default allocates ip-address of subnet 172.17.0.0/16 that is why "grep 172" in search
     local_ip=$(docker exec ovs$i ip a show | awk '/inet / {print $2}' | grep -o ^[^/]* | grep 172)
