@@ -6,21 +6,20 @@ Docker should be pre-installed before using this repository. You can refer below
  * https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04
 
 ## Build
-Run docker build on this directory. 'docker build' command will use Dockerfile to create docker image.
+Run docker build on the current directory. 'docker build' command will use Dockerfile to create docker image.
  * docker build -t <docker_image_name> .
 
 Once docker build is run successfully, you can check your docker image by running below command:
  * docker images
 
 ## Run
-The openvswitch manager and bridge controller connections are managed via an environment variable, MODE,
-which must be passed in when the container is spun up. This MODE may have one of the following four forms:
+The openvswitch manager (for ovsdb connection) and bridge controller (for openflow connection) are managed via an environment variable MODE, which must be passed as command-line argument when the container is instantiated. This MODE may have one of the following four forms:
  * MODE=none - will result in no manager or controller being set
  * MODE=ptcp - except passive manager tcp conntections 
  * MODE=tcp - set the manager and controller IPs to the value of the default route
  * MODE=tcp:10.10.1.1 manager and controller IPs to the IP specified. Generally speaking, you will not need this option
 
-To run the docker image say,
+To run the docker image, you can use below commands:
  * sudo docker run -itd --name <docker_instance_name> -e MODE=none --cap-add NET_ADMIN <name_of_docker_image>
  * sudo docker run -itd --name <docker_instance_name> -e MODE=tcp:<controller_ip> --cap-add NET_ADMIN <name_of_docker_image>
 
