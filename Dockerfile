@@ -7,6 +7,8 @@ RUN apt-get update
 # Install pre-requisites packages
 RUN apt-get install -y curl
 RUN apt-get install -y python
+RUN apt-get install -y yum
+RUN apt-get install -y dpkg
 
 # Configure supervisord
 RUN mkdir -p /var/log/supervisor/
