@@ -10,7 +10,6 @@ echo "Number of Switches specified: " $1
 for ((i=1;i<=$1;i++)); do
     docker stop ovs$i
     sleep 1
-    docker rm ovs$i
     echo "Removed docker container ovs$i"
 done
 
