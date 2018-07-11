@@ -1,5 +1,9 @@
 # docker-ubuntu-ovs
-This repository is to create docker image to have openvswitch i.e. OVS running inside ubuntu image.
+This repository is to create docker image to have openvswitch i.e. OVS running inside ubuntu image. It is having few more scripts to use docker image to instantiare large number of docker containers having ovs switch running inside them
+
+## Pre requisites
+Docker should be pre-installed before using this repository. You can refer below link to install docker on Ubuntu machine.
+ * https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04
 
 ## Build
 Run docker build on this directory. 'docker build' command will use Dockerfile to create docker image.
