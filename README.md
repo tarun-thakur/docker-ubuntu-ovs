@@ -47,9 +47,9 @@ Usage: $ ./script_name <num_of_ovs_instances>
   
 ## NOTES
  * configure_ovs.sh, mk-net-dev.sh, supervisord.conf are taken from the contribution of Josh Hershberg specified in Credits section.
- * You may need to change 'grep string' at line 6 of configure_ovs.sh as per subnet range of docker networking in the ubuntu container. Currently, it is of subnet 172.17.0.0/16.
+ * You may need to change 'grep 172' in the configure_ovs.sh file as per subnet range of docker networking in the ubuntu container. Currently, it is of subnet 172.17.0.0/16.
  * Try not to use office network while building docker image because due to some restrictions and access issues in the office network, some sites and packages are not accessible, hence build gets failed.
- * You must need to change name of docker image in the run_docker_ovs.sh file at line 12.
+ * You must need to change name of docker image in the run_docker_ovs.sh file at line of 'docker run' command.
 
 ## Credits
 This docker solution is largely based on following contributors in github:
