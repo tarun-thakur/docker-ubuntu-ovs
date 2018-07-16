@@ -44,4 +44,5 @@ ADD mk-net-dev.sh /usr/share/openvswitch/
 # Create the database
 RUN ovsdb-tool create /etc/openvswitch/conf.db /usr/share/openvswitch/vswitch.ovsschema
 
+# Start supervisord daemon inside container to supervise ovs processes
 CMD ["/usr/local/bin/supervisord"]
