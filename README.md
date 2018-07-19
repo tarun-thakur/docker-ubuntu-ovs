@@ -1,5 +1,5 @@
 # docker-ubuntu-ovs
-This repository is to create docker image to have openvswitch i.e. OVS running inside ubuntu image. It is having few more scripts to use docker image to instantiare large number of docker containers having ovs switch running inside them
+This repository is to create docker image to have openvswitch i.e. OVS running inside ubuntu image. It is having few more scripts to use docker image to instantiate large number of docker containers having ovs switch running inside them.
 
 ## Pre requisites
 Docker should be pre-installed before using this repository. You can refer below link to install docker on Ubuntu machine.
@@ -22,6 +22,7 @@ The openvswitch manager (for ovsdb connection) and bridge controller (for openfl
 To run the docker image, you can use below commands:
  * sudo docker run -itd --name <docker_instance_name> -e MODE=none --cap-add NET_ADMIN <name_of_docker_image>
  * sudo docker run -itd --name <docker_instance_name> -e MODE=tcp:<controller_ip> --cap-add NET_ADMIN <name_of_docker_image>
+NOTE: "--cap-add NET_ADMIN" option is provided to add linux capabilities to containers to access network interfaces.
 
 ## How to run ovs commands under docker
 Below are the sample ovs commands:
