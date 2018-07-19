@@ -21,6 +21,7 @@ The openvswitch manager (for ovsdb connection) and bridge controller (for openfl
 To run the docker image, you can use below commands:
  * sudo docker run -itd --name <docker_instance_name> -e MODE=none --cap-add NET_ADMIN <name_of_docker_image>
  * sudo docker run -itd --name <docker_instance_name> -e MODE=tcp:<controller_ip> --cap-add NET_ADMIN <name_of_docker_image>
+
 NOTE: "--cap-add NET_ADMIN" option is provided to add linux capabilities to containers to access network interfaces.
 
 ## How to run ovs commands under docker
