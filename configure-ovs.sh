@@ -1,4 +1,12 @@
 #!/bin/sh
+
+# This script is for configuring ovs like:
+# - setting various openvswitch ovsdb parameters
+# - setting local_ip that is used as TEP ip
+# - setting ovsdb manager for ovs
+# - setting bridge controller
+
+
 ovs_version=$(ovs-vsctl -V | grep ovs-vsctl | awk '{print $4}')
 ovs_db_version=$(ovsdb-tool schema-version /usr/share/openvswitch/vswitch.ovsschema)
 # Get IP address of container;
